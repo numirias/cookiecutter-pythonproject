@@ -2,12 +2,13 @@
   "author": "numirias",
   "email": "numirias@users.noreply.github.com",
   "github_username": "numirias",
-  "project_name": "WIP",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_name": "Some project",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
   "project_short_description": "A work in progress.",
   "pypi_username": "{{ cookiecutter.github_username }}",
   "version": "0.1",
   "license": ["MIT license", "Personal"],
   "cli": true,
-  "use_pytest": true,
+  "use_pytest": true
 }

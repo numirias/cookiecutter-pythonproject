@@ -3,7 +3,6 @@ import sys
 
 def main():
     # TODO
-    ...
     return 0
 
 
