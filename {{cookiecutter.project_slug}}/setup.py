@@ -20,11 +20,11 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 
-setup_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest-runner',{%- endif %} ]
-test_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest',{%- endif %} ]
+setup_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest-runner',{%- endif %}]
+test_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest',{%- endif %}]
 
 setup(
-    author="{{ cookiecutter.author }}",
+    author='{{ cookiecutter.author }}',
     author_email='{{ cookiecutter.email }}',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
@@ -32,7 +32,7 @@ setup(
         '{{ license_classifiers[cookiecutter.license] }}',
 {%- endif %}
         'Natural Language :: English',
-        "Programming Language :: Python :: 2",
+        'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
@@ -40,7 +40,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    description="{{ cookiecutter.project_short_description }}",
+    description='{{ cookiecutter.project_short_description }}',
     {%- if cookiecutter.cli %}
     entry_points={
         'console_scripts': [
@@ -50,7 +50,7 @@ setup(
     {%- endif %}
     install_requires=[],
 {%- if cookiecutter.license in license_classifiers %}
-    license="{{ cookiecutter.license }}",
+    license='{{ cookiecutter.license }}',
 {%- endif %}
     long_description=long_description,
     long_description_content_type='text/markdown',
